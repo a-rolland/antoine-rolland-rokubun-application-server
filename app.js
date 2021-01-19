@@ -57,8 +57,10 @@ app.use(
 
 const index = require('./routes/index');
 const authRoutes = require("./routes/auth-routes");
+const favoritePlaceRoutes = require("./routes/favorite-place-routes");
 app.use('/', index);
 app.use("/api", authRoutes);
+app.use("/api", favoritePlaceRoutes);
 
 
 module.exports = app;
