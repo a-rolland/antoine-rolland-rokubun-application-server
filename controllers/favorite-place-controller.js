@@ -13,6 +13,11 @@ const postNewPlace = async (req, res, next) => {
     return;
   }
 
+  if (!place) {
+    res.status(400).json({ message: "Please select a place" });
+    return;
+  }
+
   const newFavoritePlaceObject = {
     name: name,
     description: description,
